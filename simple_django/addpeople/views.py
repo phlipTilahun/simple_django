@@ -18,7 +18,8 @@ def postPerson(request):
         bodyInBytes = request.body
         bodyInJson = json.loads(bodyInBytes.decode('utf8'))
 
-        print(bodyInJson)
+        if(People.objects.filter(firstName=bodyInJson["firstName"],lastName=bodyInJson["lastName"])):
+            return HttpResponse("Person already exists")
         p = People(firstName=bodyInJson["firstName"],lastName=bodyInJson["lastName"],age=bodyInJson["age"],sex=bodyInJson["sex"],createdBy=bodyInJson["user"])
         p.save()
         return HttpResponse("Success")

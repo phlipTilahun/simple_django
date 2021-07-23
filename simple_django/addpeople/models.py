@@ -12,4 +12,4 @@ class People(models.Model):
     createdBy = models.IntegerField(null=True)
 
     def __str__(self):
-        return self.firstName + "  " + self.lastName + " " + str(self.age) + " " + self.sex + "\n"        
+        return self.firstName + " " + self.lastName + " " + str(self.age) + " " + self.sex + "\n"        
