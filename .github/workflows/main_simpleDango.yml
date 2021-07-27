@@ -38,7 +38,7 @@ jobs:
 
     - name: Run Server
       run: |
-        ls 
+        cd simple_django
         python manage.py runserver                  
 
     # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
