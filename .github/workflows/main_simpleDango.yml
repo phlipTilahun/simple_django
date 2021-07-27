@@ -63,6 +63,8 @@ jobs:
 
       - name: 'Start Server'
         run: |
+          python virtualenv venv
+          source venv/bin/activate
           cd simple_django
           pip list
           python manage.py migrate
