@@ -39,7 +39,7 @@ jobs:
     - name: Run Server
       run: |
         cd simple_django
-        python manage.py runserver --noreload              
+        python manage.py runserver manage.py runserver 0.0.0.0:%HTTP_PLATFORM_PORT%              
 
     # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
