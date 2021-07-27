@@ -34,7 +34,7 @@ jobs:
       run: |
         pip list
         cd simple_django
-        python manage.py migrate
+        python3 manage.py migrate
 
     - name: Run Server
       run: python manage.py runserver                  
