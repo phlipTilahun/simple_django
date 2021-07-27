@@ -37,7 +37,9 @@ jobs:
         python3 manage.py migrate
 
     - name: Run Server
-      run: python manage.py runserver                  
+      run: |
+        ls 
+        python manage.py runserver                  
 
     # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
