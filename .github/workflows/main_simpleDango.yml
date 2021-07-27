@@ -63,6 +63,7 @@ jobs:
 
       - name: 'Start Server'
         run: |
+          python -m pip install --user virtualenv
           python virtualenv venv
           source venv/bin/activate
           cd simple_django
