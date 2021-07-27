@@ -60,3 +60,10 @@ jobs:
           app-name: 'simpleDango'
           slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_76282ddbe53f46a1b92cf35418882605 }}
+          
+      - name: 'Start Server'
+      - run: |
+          cd simple_django
+          python manage.py migrate
+          python manage.py startserver
+             
